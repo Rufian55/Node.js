@@ -1,0 +1,20 @@
+{
+  "name": "database_ui",
+  "version": "1.0.3",
+  "description": "Final Project Workout Tracker",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chris Kearns",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.10.2",
+    "path": "^0.12.7",
+    "request": "^2.69.0",
+    "serve-favicon": "^2.3.0"
+  }
+}

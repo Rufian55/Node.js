@@ -1,0 +1,66 @@
+<div class="centerMe">
+<form id="newExercise" action="/insert">
+	<fieldset class="fieldset-auto-width">
+		<legend>Enter An Exercise</legend>
+		<label for="workoutName">Excercise Name: </label>
+	    <input type="text" name="workoutName" id="workoutName" required>
+		<br>
+		<label for="reps">Targeted Reps: </label>
+		<input type="number" name="reps" id="reps">
+		<br>
+		<label for="weight">Target Weight: </label>
+		<input type="number" name="weight" id="weight">
+		<br>
+		<label for="date">Workout Date: </label>
+		<input type="date" name="date" id="date">
+		<br>
+		<label for="lbs">Lbs</label>
+		<input type="radio" name="lbs" value="1" id="lbs" checked="checked">
+		&nbsp;
+		<label for="kgs">Kgs</label>
+		<input type="radio" name="lbs" value="0"><br>
+		<br>
+		<input type="submit" id="submit" value="Submit Exercise">
+	</fieldset>
+</form>
+</div>
+<div class="centerTable">
+<h1>Workout Exercises</h1>
+<table id="exerciseTable">
+	<tr>
+	<th style="display:none">ID</th>
+	<th class="lefty">Exercise</th>
+	<th class="Reps">Reps</th>
+	<th class="Weight">Weight</th>
+	<th class="LK">LBS-KGS</th>
+	<th class="Date">Date</th>
+	<th class="Edit">Edit</th>
+	<th class="Delete">Delete</th>
+	</tr>
+	{{#each workouts}}
+		<tr>
+		<td style="display:none">{{this.id}}</td>
+		<td class="td_lefty">{{this.name}}</td>
+		<td>{{this.reps}}</td>
+		<td>{{this.weight}}</td>
+		<td>{{this.lbs}}</td>
+		<td>{{this.date}}</td>
+		<td><a href="/editRow?id={{this.id}}"><input type="button" value="Edit" id="edit")"></a></td>
+		<td><input type="button" value="Delete" id="delete" onclick="deleteExercise('exerciseTable', this, {{this.id}})"></td>
+		</tr>
+	{{/each}}
+</table>
+</div>
+<div>
+<br>
+<fieldset class="inst">
+<p id="p1">Instructions:</p>
+<p class="p2">Enter a new exercise with completed repititions and weight.</p>
+<p class="p2">Exercise name may not be blank.</p>
+<p id="p3">Go heavy or go home!</p>
+</fieldset>
+</div>
+<!-- AJAX form hanlder source. -->
+<script src="/javascripts/dbUIscript.js"></script>
+<!-- Prepopulate date value with today's date. -->
+<script type="text/javascript">document.getElementById('date').value = getTDate();</script>

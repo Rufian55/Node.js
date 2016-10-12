@@ -1,0 +1,83 @@
+/* 	File style.css
+	Included in views/layouts/main.handlebars.
+*/
+
+#exerciseTable {margin: 0px auto; } /* TA Gopinath via https://piazza.com/class/ipg9pgicbxl5mk?cid=123 */
+
+#exerciseTable th {
+    border: 1px solid blue;
+	background-color:#99FFFF;
+}
+
+#exerciseTable td{border:1px solid blue;}
+
+.fieldset-auto-width{
+	display:inline-block;
+	text-align:right;
+}
+
+.inst{
+	display:inline-block;
+	text-align:center;
+}
+
+body {background-color:#CCFFFF;}
+
+div {text-align:center;}
+
+.lefty {
+	text-align:left;
+	width:150px;
+}
+
+.Reps {width:40px;}
+
+.Weight {width:60px;}
+
+.LK {width:80px;}
+
+.Date {width:125px;}
+
+.Edit {width:45px;}
+
+.Delete {width:60px;}
+
+.td_lefty{text-align:left;}
+
+#submit {
+	height: 25px;
+	width: 125px;
+	border-radius: 5px;
+	font-size: 13px;
+	background-color: blue;
+	color: yellow;
+}
+
+#edit {
+	border-radius: 5px;
+	font-size: 13px;
+	background-color: blue;
+	color: yellow;
+}
+
+#delete {
+	border-radius: 5px;
+	font-size: 13px;
+	background-color: red;
+	color: yellow;
+}
+
+#p1{
+	font-size:20px;
+	color:#FF0000;
+}
+
+.p2{
+	font-size:14px;
+	color:#000033;
+}
+
+#p3{
+	font-size:24px;
+	color:#FF0000;
+}

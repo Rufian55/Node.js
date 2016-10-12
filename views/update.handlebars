@@ -1,0 +1,45 @@
+<div>
+<form id="newExercise" action="/update">
+	<fieldset class="fieldset-auto-width">
+		<legend>Enter An Exercise</legend>
+		<label for="workoutName">Exercise Name: </label>
+		<input type="text" name="workoutName" id="workoutName" value="{{workouts.name}}" required>
+		<br>
+		<label for="reps">Targeted Reps: </label>
+		<input type="number" name="reps" id="reps" value="{{workouts.reps}}">
+		<br>
+		<label for="weight">Target Weight: </label>
+		<input type="number" name="weight" id="weight" value="{{workouts.weight}}">
+		<br>
+		<label for="date">Workout Date: </label>
+		<input type="date" name="date" id="date" value="{{workouts.date}}">
+		<br>
+	{{#if workouts.lbs}}
+		<label for="lbs">Lbs</label>
+		<input type="radio" name="lbs" value="1" id="lbs" checked="checked">
+		<label for="kgs">Kgs</label>
+		<input type="radio" name="lbs" value="0">
+		<br>
+	{{else}}
+		<label for="lbs">Lbs</label>
+		<input type="radio" name="lbs" value="1" id="lbs">
+		<label for="kgs">Kgs</label>
+		<input type="radio" name="lbs" value="0" checked="checked">
+		<br>
+	{{/if}}
+		<input type="hidden" name="id" value={{workouts.id}}>
+		<br>
+		<input type="submit" id="submit" value="Submit Exercise">
+	</fieldset>
+</form>
+</div>
+<div>
+<br>
+<fieldset class="inst">
+<p id="p1">Instructions:</p>
+<p class="p2">Make changes to exercise details as desired.</p>
+<p class="p2">Once all changes are entered, click or tap the "Submit Exercise" button</p>
+<p class="p2">to be returned to the home page with new changes made.</P>
+<p id="p3">Go heavy or go home!</p>
+</fieldset>
+</div>
